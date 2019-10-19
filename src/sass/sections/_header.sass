@@ -1,0 +1,333 @@
+.header
+   position: relative
+   display: flex
+   height: 100vh
+   background-position: center
+   background-repeat: no-repeat
+   background-size: cover
+
+   &__sidebar
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding-bottom: 45px
+      width: 170px
+      text-transform: none
+      border-right: 1px solid rgba(#fff, 0.3)
+
+   &__content
+      position: relative
+      flex-grow: 1
+      display: flex
+      justify-content: flex-end
+      align-items: flex-end
+
+   &__title
+      position: absolute
+      margin: 0
+      width: 470px
+      font-size: 200px
+      line-height: 156px
+      opacity: .07
+
+   &__logo
+      position: relative
+      display: block
+      width: 100% 
+      height: 300px
+      cursor: pointer
+
+   &__logo-text
+      display: inline-block
+      padding-right: 30px
+      font-size: 60px
+      font-weight: 800
+      line-height: 170px
+      text-align: center
+      text-transform: uppercase
+      transform-origin: left top
+      transform: rotate(-90deg) translateX(-100%)
+      &_bg
+         background-color: $accent 
+         padding: 0 20px
+         &::before
+            +pseudo
+            width: 20px
+            height: 1px
+            background-color: #fff
+            left: -10px
+            top: 50%
+
+   &__navbar
+      margin-top: auto
+
+   &__icon
+      &-search
+         display: block
+         margin-top: 50px
+         width: 24px
+         height: 24px
+         transform: scale(1)
+         transition: transform .3s
+         cursor: pointer
+         &:hover
+            transform: scale(1.2)
+      &-location
+         width: 11px
+         height: 13px
+         margin-right: 8px
+      &-arrow
+         width: 24px
+         height: 20px
+         cursor: pointer
+         &_left
+            margin-right: 20px
+            transform: scaleX(-1)
+
+   &__date
+      margin-top: 30px
+
+   &__location
+      display: flex
+      align-items: center
+      margin-top: 30px
+      font-size: 12px
+      font-weight: 300
+      letter-spacing: 1.05px
+      cursor: default
+
+   &__shores
+      margin-right: 75px
+      margin-bottom: 35px
+
+   &__arrows
+      position: absolute
+      top: 40px
+      right: 75px
+      z-index: 100
+      
+
+
+.navbar
+   display: flex
+   flex-direction: column
+   align-items: center
+   justify-content: space-between
+
+   &__link
+      display: flex
+      flex-direction: column
+      align-items: center
+      &:not(:first-child)
+         margin-top: 35px
+      &:hover
+         .navbar
+            &__icon-nav
+               transform: translateY(-3px)
+            &__text
+               transform: translateY(3px)
+   &__icon-nav
+      height: 60px
+      width: auto
+      stroke: transparent
+      stroke-width: 0.6px
+      fill: white
+      transform: translateY(0px)
+      transition: transform .3s
+
+      &_surf
+         width: 58px
+         height: 45px
+         margin-bottom: 7px
+      &_bus
+         width: 50px
+         height: 31px
+         margin-bottom: 7px
+      &_camp
+         width: 38px
+         height: 43px
+      &_board
+         width: 25px
+         height: 60px
+
+
+
+   &__text
+      font-size: 12px
+      font-weight: 500
+      letter-spacing: 3px
+      transform: translateY(0px)
+      transition: transform .3s
+
+.date
+   display: flex
+   flex-direction: column
+   align-items: center
+   cursor: default
+   &__day
+      display: block
+      font-size: 72px
+      font-weight: 800
+   &__small
+      font-weight: 300
+      letter-spacing: 1.4px
+
+.map
+   position: absolute
+   width: 770px
+   right: 0
+   top: 0
+   fill: none
+   
+   &__shore
+      position: absolute
+      fill: none
+      stroke: white
+      width: 770px
+      height: 500px
+      opacity: .3
+
+   &__location
+      position: absolute
+      left: 430px
+      top: 55px
+      text-transform: none
+      cursor: default
+
+   &__destination
+      position: absolute
+      text-transform: none
+      transform: scaleY(0)
+      transition: transform .5s
+      cursor: default
+      &_1
+         left: -67px
+         top: 215px
+      &_2
+         left: 150px
+         top: 310px
+      &_3
+         left: 235px
+         top: 350px
+      &_4
+         left: 287px
+         top: 452px
+      &_active
+         transform: scaleY(1)
+
+   &__paths
+      position: absolute
+      left: 126px
+      top: 76px
+
+   &__point
+      position: absolute
+      fill: $accent
+      transition: transform .3s
+      transform: scale(.5)
+      &_0
+         left: 478px
+         top: 80px
+      &_1
+         left: 120px
+         top: 217px
+      &_2
+         left: 328px
+         top: 312px
+      &_3
+         left: 411px
+         top: 350px
+      &_4
+         left: 475px
+         top: 453px
+      &_active
+         transform: scale(1)
+
+   &__path
+      display: none
+      position: absolute
+      fill: none
+      stroke: red
+      &_1
+         width: 363px
+         height: 151px
+      &_2
+         width: 202px
+         height: 234px 
+         left: 192px
+         top: 8px
+      &_3
+         width: 205px
+         height: 274px
+         left: 223px
+         top: 9px
+      &_4
+         width: 283px
+         height: 382px
+         left: 275px
+         top: 7px
+      &_active
+         display: block
+         stroke-dasharray: 1200
+         stroke-dashoffset: 1200
+         animation: path 5s infinite linear 2s
+
+.shores
+   width: 920px
+   overflow: hidden
+   &__slider
+      // width: 400px
+      &-item
+         text-align: right
+
+   &__title
+      display: block
+      margin-top: 20px
+      margin-bottom: 50px
+      font-size: 80px
+      font-weight: 800
+
+
+   &__condition
+      display: block
+      margin-top: 20px
+      font-size: 40px
+      font-weight: 800
+
+   &__icon-arrow
+      width: 24px
+      height: 20px
+      margin-top: 30px
+      cursor: pointer
+
+   &__nav
+      margin-top: 40px
+      &-item
+         display: flex
+         justify-content: space-between
+         align-items: center
+         margin-left: 40px
+         padding-top: 10px
+         border-top: 4px solid #fff
+
+      .slick-current
+         .shores__nav-item
+            border-top-color: $accent
+
+   &__index
+      font-size: 24px
+      font-weight: 800
+
+   &__name
+      text-transform: none
+      font-weight: 300
+
+
+
+@keyframes path 
+   to 
+      stroke-dashoffset: 0
+
+
+
+ 

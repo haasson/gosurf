@@ -1,0 +1,74 @@
+- 
+   let menuItems = [
+      {title: 'Surf', icon: 'surf', link: '#'},
+      {title: 'Travel', icon: 'bus', link: '#'},
+      {title: 'Sleep', icon: 'camp', link: '#'},
+      {title: 'Shop', icon: 'board', link: '#'},
+   ]
+- 
+   let destinations = [
+      {name: 'North Shore', place: 'Malibu, CA', condition: 'radical'}, 
+      {name: 'West Shore', place: 'Malibu, CA', condition: 'radical'}, 
+      {name: 'East Shore', place: 'Malibu, CA', condition: 'radical'}, 
+      {name: 'South Shore', place: 'Malibu, CA', condition: 'radical'}, 
+   ]
+
+header.header(style="background-image: url(img/header/header-bg.jpg)")
+   h1.header__title Go surf
+   .header__sidebar
+      a.header__logo
+         span.header__logo-text.header__logo-text_bg Surf
+         span.header__logo-text Go
+      nav.header__navbar.navbar
+         - for(let i=0; i<menuItems.length; i++) 
+            - let item = menuItems[i]
+            a.navbar__link(href=`${item.link}`)
+               +svg(`${item.icon}`, `navbar__icon-nav navbar__icon-nav_${item.icon}`)
+               span.navbar__text= item.title
+      +svg('search', 'header__icon-search')
+      .header__date.date
+         span.date__day 20
+         span.date__small 08 | 2018
+
+
+      .header__location
+         +svg('location', 'header__icon-location')
+         span.header__city California
+
+   .header__content
+      .header__map.map
+         +svg('shore', 'map__shore')
+         .map__labels
+            span.map__location Current Location
+            - for(let i=1; i<destinations.length+1; i++)
+               span(class=`map__destination map__destination_${i} ${i===1 ? 'map__destination_active' : ''}`)= destinations[i-1].name + ' | ' + destinations[i-1].place
+         .map__paths
+            - for(let i=1; i<5; i++)
+               +svg(`path-${i}`, `map__path map__path_${i} ${i===1 ? 'map__path_active' : ''}`)
+         .map__points
+            - for(let i=0; i<5; i++)
+               +svg(`point`, `map__point map__point_${i} ${i===0 || i===1 ? 'map__point_active' : ''}`)
+      
+      .header__shores.shores
+         .shores__slider
+            - for(let i=1; i<destinations.length+1; i++)
+               .shores__slider-item
+                  span.shores__suptitle.suptitle Surf
+                  span.shores__title= destinations[i-1].name
+                  span.shores__suptitle.suptitle Condition
+                  span.shores__condition= destinations[i-1].condition
+                  +svg('arrow', 'shores__icon-arrow')
+         .shores__nav
+            - for(let i=1; i<destinations.length+1; i++)
+               .shores__nav-slide
+                  .shores__nav-item
+                     span.shores__index= '0'+i
+                     span.shores__name= destinations[i-1].name
+      .header__arrows
+         +svg('arrow', 'header__icon-arrow header__icon-arrow_left')
+         +svg('arrow', 'header__icon-arrow header__icon-arrow_right')
+
+
+
+
+      

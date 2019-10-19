@@ -1,0 +1,90 @@
+html, body
+   height: 100%
+
+body
+   position: relative
+   min-width: 320px
+   background-color: #171919
+   color: #fff
+   font-family: 'fira sans'
+   font-size: 16px
+   text-transform: uppercase
+
+.wrapper
+   width: calc(100% - 265px)
+   margin: 0 auto
+
+img
+   max-width: 100%
+
+a
+   text-decoration: none
+   color: inherit
+
+.section
+   // padding: 50px 0
+   &-title
+      display: inline-block
+      position: relative
+      margin-left: 245px
+      font-size: 80px
+      font-weight: 800
+      &::after
+         position: absolute
+         display: block
+         content: attr(data-title)
+         font-size: 200px
+         font-weight: 800
+         opacity: .02
+         left: -295px
+         top: 0px
+      &::before
+         +pseudo
+         width: 80px
+         height: 1px
+         background-color: $accent
+         right: 0
+
+.suptitle
+   position: relative
+   margin-right: -7.3px
+   font-size: 22px
+   opacity: .5
+   letter-spacing: 7.3px
+   &::before
+      +pseudo
+      width: 80px
+      height: 1px
+      left: -105px
+      top: 50%
+      background-color: rgba(#fff, 0.5)
+
+
+
+      
+
+      
+
+/*======================== MEDIA QUERIES ===============================*/
+
+
+@media (max-width: 1200px)
+   .section
+      padding: 40px 0
+      &-title
+         margin-bottom: 30px
+         font-size: 28px
+
+@media (max-width: 992px)
+   .section
+      padding: 30px 0
+      &-title
+         margin-bottom: 25px
+         font-size: 26px
+
+@media (max-width: 768px)
+   .section
+      padding: 20px 0
+      &-title
+         margin-bottom: 20px
+         font-size: 24px

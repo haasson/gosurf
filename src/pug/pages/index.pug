@@ -1,0 +1,39 @@
+extends ../layout/main
+
+block variables
+   - var title = 'go-surf'
+   - 
+      let places = [
+         {
+            country: 'Australia', 
+            city: 'Queensland', 
+            name: 'Airlie Beach', 
+            hotels: [
+               {
+                  name: 'Auberge',
+                  rating: 'excellent',
+                  prices: [119, 189, 289, 349],
+                  discount: {
+                     5: 10,
+                     10: 20
+                  }
+               }
+            ]
+         }
+      ]
+
+block content
+   include ..//includes/modules/header
+   include ..//includes/modules/surf
+   include ..//includes/modules/travel
+   include ..//includes/modules/sleep
+   include ..//includes/modules/shop
+   .world-map
+      +svg('location', 'icon-location location')
+      img(src="img/map.png", alt="" class="img")
+   .locationText
+   +svg('point', 'icon-star')
+   h2.section-title(data-title="surf") Surf
+
+
+
