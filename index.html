@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>go-surf</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header" style="background-image: url(img/header/header-bg.jpg)">
+      <h1 class="header__title">Go surf</h1>
+      <div class="header__sidebar"><a class="header__logo"><span class="header__logo-text header__logo-text_bg">Surf</span><span class="header__logo-text">Go</span></a>
+        <nav class="header__navbar navbar"><a class="navbar__link" href="#">
+            <svg class="icon navbar__icon-nav navbar__icon-nav_surf">
+              <use xlink:href="svg/sprite.svg#surf"></use>
+            </svg><span class="navbar__text">Surf</span></a><a class="navbar__link" href="#">
+            <svg class="icon navbar__icon-nav navbar__icon-nav_bus">
+              <use xlink:href="svg/sprite.svg#bus"></use>
+            </svg><span class="navbar__text">Travel</span></a><a class="navbar__link" href="#">
+            <svg class="icon navbar__icon-nav navbar__icon-nav_camp">
+              <use xlink:href="svg/sprite.svg#camp"></use>
+            </svg><span class="navbar__text">Sleep</span></a><a class="navbar__link" href="#">
+            <svg class="icon navbar__icon-nav navbar__icon-nav_board">
+              <use xlink:href="svg/sprite.svg#board"></use>
+            </svg><span class="navbar__text">Shop</span></a>
+        </nav>
+        <svg class="icon header__icon-search">
+          <use xlink:href="svg/sprite.svg#search"></use>
+        </svg>
+        <div class="header__date date"><span class="date__day">20</span><span class="date__small">08 | 2018</span></div>
+        <div class="header__location">
+          <svg class="icon header__icon-location">
+            <use xlink:href="svg/sprite.svg#location"></use>
+          </svg><span class="header__city">California</span>
+        </div>
+      </div>
+      <div class="header__content">
+        <div class="header__map map">
+          <svg class="icon map__shore">
+            <use xlink:href="svg/sprite.svg#shore"></use>
+          </svg>
+          <div class="map__labels"><span class="map__location">Current Location</span><span class="map__destination map__destination_1 map__destination_active">North Shore | Malibu, CA</span><span class="map__destination map__destination_2 ">West Shore | Malibu, CA</span><span class="map__destination map__destination_3 ">East Shore | Malibu, CA</span><span class="map__destination map__destination_4 ">South Shore | Malibu, CA</span>
+          </div>
+          <div class="map__paths">
+            <svg class="icon map__path map__path_1 map__path_active">
+              <use xlink:href="svg/sprite.svg#path-1"></use>
+            </svg>
+            <svg class="icon map__path map__path_2 ">
+              <use xlink:href="svg/sprite.svg#path-2"></use>
+            </svg>
+            <svg class="icon map__path map__path_3 ">
+              <use xlink:href="svg/sprite.svg#path-3"></use>
+            </svg>
+            <svg class="icon map__path map__path_4 ">
+              <use xlink:href="svg/sprite.svg#path-4"></use>
+            </svg>
+          </div>
+          <div class="map__points">
+            <svg class="icon map__point map__point_0 map__point_active">
+              <use xlink:href="svg/sprite.svg#point"></use>
+            </svg>
+            <svg class="icon map__point map__point_1 map__point_active">
+              <use xlink:href="svg/sprite.svg#point"></use>
+            </svg>
+            <svg class="icon map__point map__point_2 ">
+              <use xlink:href="svg/sprite.svg#point"></use>
+            </svg>
+            <svg class="icon map__point map__point_3 ">
+              <use xlink:href="svg/sprite.svg#point"></use>
+            </svg>
+            <svg class="icon map__point map__point_4 ">
+              <use xlink:href="svg/sprite.svg#point"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="header__shores shores">
+          <div class="shores__slider">
+            <div class="shores__slider-item"><span class="shores__suptitle suptitle">Surf</span><span class="shores__title">North Shore</span><span class="shores__suptitle suptitle">Condition</span><span class="shores__condition">radical</span>
+              <svg class="icon shores__icon-arrow">
+                <use xlink:href="svg/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="shores__slider-item"><span class="shores__suptitle suptitle">Surf</span><span class="shores__title">West Shore</span><span class="shores__suptitle suptitle">Condition</span><span class="shores__condition">radical</span>
+              <svg class="icon shores__icon-arrow">
+                <use xlink:href="svg/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="shores__slider-item"><span class="shores__suptitle suptitle">Surf</span><span class="shores__title">East Shore</span><span class="shores__suptitle suptitle">Condition</span><span class="shores__condition">radical</span>
+              <svg class="icon shores__icon-arrow">
+                <use xlink:href="svg/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+            <div class="shores__slider-item"><span class="shores__suptitle suptitle">Surf</span><span class="shores__title">South Shore</span><span class="shores__suptitle suptitle">Condition</span><span class="shores__condition">radical</span>
+              <svg class="icon shores__icon-arrow">
+                <use xlink:href="svg/sprite.svg#arrow"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="shores__nav">
+            <div class="shores__nav-slide">
+              <div class="shores__nav-item"><span class="shores__index">01</span><span class="shores__name">North Shore</span></div>
+            </div>
+            <div class="shores__nav-slide">
+              <div class="shores__nav-item"><span class="shores__index">02</span><span class="shores__name">West Shore</span></div>
+            </div>
+            <div class="shores__nav-slide">
+              <div class="shores__nav-item"><span class="shores__index">03</span><span class="shores__name">East Shore</span></div>
+            </div>
+            <div class="shores__nav-slide">
+              <div class="shores__nav-item"><span class="shores__index">04</span><span class="shores__name">South Shore</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__arrows">
+          <svg class="icon header__icon-arrow header__icon-arrow_left">
+            <use xlink:href="svg/sprite.svg#arrow"></use>
+          </svg>
+          <svg class="icon header__icon-arrow header__icon-arrow_right">
+            <use xlink:href="svg/sprite.svg#arrow"></use>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <section class="section surf">
+      <h2 class="surf__title section-title" data-title="surf">Surf</h2>
+      <svg class="icon surf__icon-location_big">
+        <use xlink:href="svg/sprite.svg#location"></use>
+      </svg>
+      <div class="surf__location"><span class="suptitle surf__suptitle">Current Location</span><span class="title surf__current">California <span class="title-divider">|</span> USA</span></div>
+      <div class="surf__content">
+        <div class="surf__map" data-coords="34.0501  N -118.2446 W">
+          <div class="surf__dots"></div><img class="surf__world-map" src="img/map.png" alt="">
+        </div>
+        <div class="surf__slider"></div>
+      </div>
+    </section>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
