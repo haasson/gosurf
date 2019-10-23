@@ -1,0 +1,14 @@
+section.section.surf
+   h2.surf__title.section-title(data-title="surf") Surf
+   +svg('location', 'surf__icon-location_big')
+   .wrapper
+      .surf__location
+         span.suptitle.surf__suptitle Current Location
+         span.title.surf__current California <span class="title-divider">|</span> USA
+
+   .surf__content
+      .wrapper
+         .surf__map(data-coords="34.0501  N -118.2446 W")
+            .surf__dots
+            img(src="img/map.png", alt="" class="surf__world-map")
+         .surf__slider

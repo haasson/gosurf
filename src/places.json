@@ -1,0 +1,159 @@
+let data = {
+   "places": [
+      {
+      "country": "Australia",
+      "city": "Queensland",
+      "name": "Airlie Beach",
+      "longitude": 153.5,
+      "latitude": -28.03,
+      "weather": {
+         "surf": [9, 13],
+         "tide": "+2.3",
+         "wind": {
+            "value": 4,
+            "direction": "SE"
+         }
+      },
+      "hotels": [
+         {
+            "name": "Auberge",
+            "rating": "excellent",
+            "prices": [
+               119,
+               189,
+               289,
+               349
+            ],
+            "discount": {
+               "5": 10,
+               "10": 20
+            }
+         }
+      ]
+   },
+   {
+      "country": "USA",
+      "city": "California",
+      "name": "Malibu Beach",
+      "longitude": -118.24,
+      "latitude": 34.05,
+      "weather": {
+         "surf": [8, 11],
+         "tide": "+3.1",
+         "wind": {
+            "value": 6,
+            "direction": "NE"
+         }
+      },
+      "hotels": [
+         {
+            "name": "Malibu Hotel",
+            "rating": "excellent",
+            "prices": [
+               139,
+               199,
+               299,
+               329
+            ],
+            "discount": {
+               "3": 10,
+               "7": 20
+            }
+         }
+      ]
+   },
+   {
+      "country": "France",
+      "city": "Hossegor",
+      "name": "Vieux Boucau",
+      "longitude": -1.45,
+      "latitude": 43.70,
+      "weather": {
+         "surf": [9, 13],
+         "tide": "+2.3",
+         "wind": {
+            "value": 4,
+            "direction": "SE"
+         }
+      },
+      "hotels": [
+         {
+            "name": "Hotel & Spa Villa Seren",
+            "rating": "excellent",
+            "prices": [
+               109,
+               179,
+               259,
+               319
+            ],
+            "discount": {
+               "4": 10,
+               "8": 20
+            }
+         }
+      ]
+   },
+   {
+      "country": "Philippines",
+      "city": "Siargao",
+      "name": "Cloud Nine",
+      "longitude": 126.12,
+      "latitude": 9.85,
+      "weather": {
+         "surf": [9, 13],
+         "tide": "+2.3",
+         "wind": {
+            "value": 4,
+            "direction": "SE"
+         }
+      },
+      "hotels": [
+         {
+            "name": "Hotel & Spa Villa Seren",
+            "rating": "excellent",
+            "prices": [
+               109,
+               179,
+               259,
+               319
+            ],
+            "discount": {
+               "4": 10,
+               "8": 20
+            }
+         }
+      ]
+   },
+   {
+      "country": "South Africa",
+      "city": "Victoria Bay",
+      "name": "Paradise Cove",
+      "longitude": 22.45,
+      "latitude": -35.05,
+      "weather": {
+         "surf": [9, 13],
+         "tide": "+2.3",
+         "wind": {
+            "value": 4,
+            "direction": "SE"
+         }
+      },
+      "hotels": [
+         {
+            "name": "Hotel & Spa Villa Seren",
+            "rating": "excellent",
+            "prices": [
+               109,
+               179,
+               259,
+               319
+            ],
+            "discount": {
+               "4": 10,
+               "8": 20
+            }
+         }
+      ]
+   }
+   ]
+}

@@ -1,0 +1,165 @@
+.surf
+   position: relative
+   &__title
+      margin-top: 157px
+   &__location
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      // margin-right: 80px
+   &__current
+      display: block
+      margin-top: 15px
+
+   &__content
+      transform: translateY(-30px)
+
+   &__map
+      position: relative
+      box-sizing: border-box
+      width: 100%
+      padding: 0 80px
+      &::before
+         +pseudo
+         content: attr(data-coords)
+         right: 0
+         top: 50%
+         transform-origin: right
+         transform: translate(-50%, -50%) rotate(-90deg)
+         font-weight: 40px
+
+   &__world-map
+      width: 100%
+
+   &__icon
+      &-location
+         position: absolute
+         display: none
+         width: 16px
+         height: 13px
+         opacity: .4
+         fill: white
+         &_big
+            position: absolute
+            width: 295px
+            height: 350px
+            right: 0
+            top: 220px
+            transform: translateX(50%)
+            opacity: .03
+      &-point
+         position: absolute
+         width: 24px
+         height: 33px
+         // border-radius: 50%
+         fill: $accent
+         // box-shadow: 0px 0px 30px rgba(74, 246, 205, 0.837777)
+         transform: translate(-50%, -50%)
+         cursor: pointer
+         transition: .3s
+         &:hover
+            width: 27px
+            fill: darken($accent, 10%)
+
+   &__dots
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      height: 100%
+      .slick-list 
+         overflow: visible
+      .slick-current
+         svg
+
+   &__popup
+      position: absolute
+      box-sizing: border-box
+      width: 283px
+      // height: 216px
+
+   &-popup
+      padding: 30px
+      background: rgba(#0F1010, 0.7)
+      border-radius: 6px
+
+      &__title
+         display: block
+         position: relative
+         margin-bottom: 15px
+         font-weight: 800
+         font-size: 18px
+         &::before
+            +pseudo
+            left: 0
+            bottom: -7px
+            width: 80px
+            height: 1px
+            background-color: $accent
+
+      &__subtitle
+         text-transform: none
+
+      &__icon
+         &-arrow
+            position: absolute
+            right: 30px
+            top: 30px
+
+
+      &__weather
+         display: flex
+         justify-content: space-between
+         margin-top: 30px
+         padding: 0 8px
+
+         &-item
+            display: flex
+            flex-direction: column
+            align-items: center
+
+         &-icon
+            height: 24px
+            width: 100%
+
+         &-value
+            display: block
+            margin-top: 8px
+            font-weight: 800
+
+         &-description
+            display: block
+            margin-top: 8px
+            font-size: 10px
+            font-weight: 300
+
+
+   &__slide
+      width: 100%
+      // border: 1px solid green
+      &-inner
+         display: flex
+         justify-content: center
+         align-items: center
+         height: 300px
+         width: 100%
+         background-color: $accent
+         // border: 1px solid red  
+      
+   &__slider    
+      .slick-list
+         padding: 80px 0     
+      .slick-current
+         .surf__slide-inner
+            background-color: tomato
+      .slick-slide
+         &:nth-child(4n+1)
+            transform: translateY(32px) 
+         &:nth-child(4n+3)
+            transform: translateY(90px) 
+
+
+   
+   
+   

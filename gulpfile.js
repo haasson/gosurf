@@ -105,6 +105,7 @@ function scripts() {
 
                // Scripts
                'src/js/jquery-3.2.1.slim.min.js',
+               'src/places.json',
                // 'src/js/jquery.magnific-popup.js',
                'src/js/slick.js',
                'src/js/main.js',
